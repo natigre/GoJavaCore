@@ -1,25 +1,33 @@
 package module2.homework;
 
+
+import java.util.Arrays;
+
 public class ArrayDemo {
     public static void main(String[] args) {
 
         int[] array = {-44, 75, 6, 8, -17, -25, 29, 68, 32, 10};
         double[] array2 = {3.6, -2.6, -7.2, 8.5, 16.3, -6.4, 1.9, -5.7, 4.5, 9.7};
 
-        System.out.println("Сумма int array: " + sum(array));
-        System.out.println("Сумма double array2: " + sum(array2));
-        System.out.println("Минимум int array: " + min(array));
-        System.out.println("Минимум double array2: " + min(array2));
-        System.out.println("Максимум int array: " + max(array));
-        System.out.println("Максимум double array2: " + max(array2));
-        System.out.println("Максимально позитивный элемент int array: " + maxPositive(array));
-        System.out.println("Максимально позитивный элемент double array2: " + maxPositive(array2));
-        System.out.println("Произведение элементов int array: " + miltiplicatoin(array));
-        System.out.println("Произведение элементов double array2: " + miltiplicatoin(array2));
-        System.out.println("Остаток от деления элементов int array: " + modulus(array));
-        System.out.println("Остаток от деления элементов double array2: " + modulus(array2));
-        System.out.println("Второй наибольший элемент в массиве array: " + secondLargest(array));
-        System.out.println("Второй наибольший элемент в массиве array2: " + secondLargest(array2));
+        System.out.println("The elements of int array: " + Arrays.toString(array));
+        System.out.println("The elements of double array2: " + Arrays.toString(array2));
+
+        System.out.println("===================================");
+
+        System.out.println("The sum of array is: " + sum(array));
+        System.out.println("The sum of array2 is  : " + sum(array2));
+        System.out.println("The minimum element of array is: " + min(array));
+        System.out.println("The minimum element of array2: " + min(array2));
+        System.out.println("The maximum element of array is: " + max(array));
+        System.out.println("The maximum element  of array2: " + max(array2));
+        System.out.println("The maximum positive element of array is: " + maxPositive(array));
+        System.out.println("The maximum positive element of array2 is: " + maxPositive(array2));
+        System.out.println("The multiplication of array is: " + miltiplicatoin(array));
+        System.out.println("The multiplication of array2 is: " + miltiplicatoin(array2));
+        System.out.println("The modulus of digits of array is: " + modulus(array));
+        System.out.println("The modulus of digits of array2 is: " + modulus(array2));
+        System.out.println("The second largest digit of array is : " + secondLargest(array));
+        System.out.println("The second largest digit of array2 is: " + secondLargest(array2));
 
     }
 

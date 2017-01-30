@@ -10,7 +10,6 @@ public class Bank {
         balance = 100;
         withdrawal = 99;
         withdrawBalance(balance, withdrawal);
-
     }
 
     public static void withdrawBalance(double balance, double withdrawal) {
