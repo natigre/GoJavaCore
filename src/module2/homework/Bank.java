@@ -1,6 +1,6 @@
 package module2.homework;
 
-public class Bank1 {
+public class Bank {
     public static void main(String[] args) {
 
         int balance = 100;
