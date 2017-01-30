@@ -15,8 +15,8 @@ public class Bank3 {
     static void withdrawBalance(String ownerName, String[] ownerNames, int[] balances, double withdrawal) {
         int balance = 0;
         for (int i = 0; i < ownerNames.length; i++) {
-            if (ownerName == ownerNames[i])
-                balance = (int) (balances[i] + withdrawal);
+            if (ownerName.equals(ownerNames[i]))
+                balance = (int)(balances[i] + withdrawal);
         }
         System.out.println(ownerName + " " + balance);
     }
