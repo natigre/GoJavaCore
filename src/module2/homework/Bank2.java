@@ -21,7 +21,7 @@ public class Bank2 {
         int count = 0;
 
         for (int i = 0; i < ownerNames.length; i++) {
-            if (ownerName.equals(ownerNames[i])) {
+            if (ownerName == (ownerNames[i])) {
                 double balance = balances[i] - (withdrawal + commision);
                 if ((withdrawal + commision) <= balances[i]) {
                     System.out.println(ownerName + " " + (int) withdrawal + " " + (int) balance);
