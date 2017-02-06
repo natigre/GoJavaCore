@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class ArrayArithmeticActions {
     public static void main(String[] args) {
 
-//        int[] intArray = {-44, 75, 6, 8, -17, -25, 29, 68, 32, 10};
-        int[] intArray = null;
+        int[] intArray = {-44, 75, 6, 8, -17, -25, 29, 68, 32, 10};
+//        int[] intArray = null;
         double[] doubleArray = {3.6, -2.6, -7.2, 8.5, 16.3, -6.4, 1.9, -5.7, 4.5, 9.7};
 //        double[] doubleArray = null;
 
