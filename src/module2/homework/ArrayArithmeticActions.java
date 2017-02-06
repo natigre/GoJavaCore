@@ -6,6 +6,8 @@ public class ArrayArithmeticActions {
     public static void main(String[] args) {
 
         int[] intArray = {-44, 75, 6, 8, -17, -25, 29, 68, 32, 10};
+//        int[] intArray = null;
+
         double[] doubleArray = {3.6, -2.6, -7.2, 8.5, 16.3, -6.4, 1.9, -5.7, 4.5, 9.7};
 
         System.out.println("The elements of int intArray: " + Arrays.toString(intArray));
@@ -13,16 +15,16 @@ public class ArrayArithmeticActions {
 
         System.out.println("===================================");
 
-        System.out.println("The sum elements of intArray is: " + getsumOfElements(intArray));
-        System.out.println("The sum elements of doubleArray is: " + getsumOfElements(doubleArray));
-        System.out.println("The minimum element of intArray is: " + getminElement(intArray));
-        System.out.println("The minimum element of doubleArray: " + getminElement(doubleArray));
-        System.out.println("The maximum element of intArray is: " + getmaxElement(intArray));
-        System.out.println("The maximum element  of doubleArray: " + getmaxElement(doubleArray));
-        System.out.println("The maximum positive element of intArray is: " + getmaxPositiveElement(intArray));
-        System.out.println("The maximum positive element of doubleArray is: " + getmaxPositiveElement(doubleArray));
-        System.out.println("The multiplication of elements of intArray is: " + getmiltiplicatoinOfElements(intArray));
-        System.out.println("The multiplication of elements of doubleArray is: " + getmiltiplicatoinOfElements(doubleArray));
+        System.out.println("The sum elements of intArray is: " + getSumOfElements(intArray));
+        System.out.println("The sum elements of doubleArray is: " + getSumOfElements(doubleArray));
+        System.out.println("The minimum element of intArray is: " + getMinElement(intArray));
+        System.out.println("The minimum element of doubleArray: " + getMinElement(doubleArray));
+        System.out.println("The maximum element of intArray is: " + getMaxElement(intArray));
+        System.out.println("The maximum element  of doubleArray: " + getMaxElement(doubleArray));
+        System.out.println("The maximum positive element of intArray is: " + getMaxPositiveElement(intArray));
+        System.out.println("The maximum positive element of doubleArray is: " + getMaxPositiveElement(doubleArray));
+        System.out.println("The multiplication of elements of intArray is: " + getMiltiplicatoinOfElements(intArray));
+        System.out.println("The multiplication of elements of doubleArray is: " + getMiltiplicatoinOfElements(doubleArray));
         System.out.println("The modulus of elements of intArray is: " + getModulus(intArray));
         System.out.println("The modulus of elements of doubleArray is: " + getModulus(doubleArray));
         System.out.println("The second largest element of intArray is : " + getSecondLargestElement(intArray));
@@ -30,114 +32,134 @@ public class ArrayArithmeticActions {
 
     }
 
-    static int getsumOfElements(int intArray[]) {
+    static int getSumOfElements(int intArray[]) {
         int sum = 0;
         if (intArray != null) {
             for (int i = 0; i < intArray.length; i++) {
                 sum += intArray[i];
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return sum;
     }
 
-    static double getsumOfElements(double doubleArray[]) {
+    static double getSumOfElements(double doubleArray[]) {
         double sum = 0;
         if (doubleArray != null) {
             for (int i = 0; i < doubleArray.length; i++) {
                 sum += doubleArray[i];
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return sum;
-
     }
 
-    static int getminElement(int intArray[]) {
-        int min = intArray[0];
+    static int getMinElement(int intArray[]) {
+        int min = 0;
         if (intArray != null) {
             for (int i = 0; i <= intArray.length - 1; i++) {
                 if (intArray[i] < min) {
                     min = intArray[i];
                 }
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return min;
-
     }
 
-    static double getminElement(double doubleArray[]) {
-        double min = doubleArray[0];
+    static double getMinElement(double doubleArray[]) {
+        double min = 0;
         if (doubleArray != null) {
             for (int i = 0; i <= doubleArray.length - 1; i++) {
                 if (doubleArray[i] < min) {
                     min = doubleArray[i];
                 }
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return min;
     }
 
-    static int getmaxElement(int intArray[]) {
-        int max = intArray[0];
+    static int getMaxElement(int intArray[]) {
+        int max = 0;
         if (intArray != null) {
             for (int i = 0; i <= intArray.length - 1; i++) {
                 if (intArray[i] > max) {
                     max = intArray[i];
                 }
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return max;
     }
 
-    static double getmaxElement(double doubleArray[]) {
-        double max = doubleArray[0];
+    static double getMaxElement(double doubleArray[]) {
+        double max = 0;
         if (doubleArray != null) {
             for (int i = 0; i <= doubleArray.length - 1; i++) {
                 if (doubleArray[i] > max) {
                     max = doubleArray[i];
                 }
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return max;
     }
 
-    static int getmaxPositiveElement(int intArray[]) {
-        int maxPositive = intArray[0];
-        if (intArray != null) {
+    static int getMaxPositiveElement(int intArray[]) {
+        int maxPositive = 0;
+        if (intArray != null)
             for (int i = 0; i <= intArray.length - 1; i++) {
                 if (intArray[i] > 0 && intArray[i] > maxPositive) {
                     maxPositive = intArray[i];
                 }
             }
+        else {
+            System.out.println("No array is provided");
         }
         return maxPositive;
     }
 
-    static double getmaxPositiveElement(double doubleArray[]) {
-        double maxPositive = doubleArray[0];
-        if (doubleArray != null)
+    static double getMaxPositiveElement(double doubleArray[]) {
+        double maxPositive = 0;
+        if (doubleArray != null) {
             for (int i = 0; i <= doubleArray.length - 1; i++)
                 if (doubleArray[i] > 0 && doubleArray[i] > maxPositive) {
                     maxPositive = doubleArray[i];
                 }
+        } else {
+            System.out.println("No array is provided");
+        }
         return maxPositive;
     }
 
-    static int getmiltiplicatoinOfElements(int intArray[]) {
+    static int getMiltiplicatoinOfElements(int intArray[]) {
         int multiplication = 1;
-        if (intArray != null) {
-            for (int i = 0; i < intArray.length; i++) {
-                multiplication *= intArray[i];
+        if (intArray != null)
+            if (intArray != null) {
+                for (int i = 0; i < intArray.length; i++) {
+                    multiplication *= intArray[i];
+                }
+            } else {
+                System.out.println("No array is provided");
             }
-        }
         return multiplication;
     }
 
-    static double getmiltiplicatoinOfElements(double doubleArray[]) {
+    static double getMiltiplicatoinOfElements(double doubleArray[]) {
         double multiplication = 1;
         if (doubleArray != null) {
             for (int i = 0; i < doubleArray.length; i++) {
                 multiplication *= doubleArray[i];
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return multiplication;
     }
@@ -150,6 +172,8 @@ public class ArrayArithmeticActions {
             } else {
                 c = intArray[0] % intArray[intArray.length - 1];
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return c;
     }
@@ -162,6 +186,8 @@ public class ArrayArithmeticActions {
             } else {
                 mod = doubleArray[0] % doubleArray[doubleArray.length - 1];
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return mod;
     }
@@ -177,6 +203,8 @@ public class ArrayArithmeticActions {
                     }
                 }
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return intArray[intArray.length - 2];
     }
@@ -192,6 +220,8 @@ public class ArrayArithmeticActions {
                     }
                 }
             }
+        } else {
+            System.out.println("No array is provided");
         }
         return doubleArray[doubleArray.length - 2];
     }

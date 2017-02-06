@@ -19,5 +19,6 @@ public class Bank3 {
                 balance = (int)(balances[i] + withdrawal);
         }
         System.out.println(ownerName + " " + balance);
+
     }
 }
