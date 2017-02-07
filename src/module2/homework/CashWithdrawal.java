@@ -8,7 +8,7 @@ public class CashWithdrawal {
         double withdrawAfter = withdrawal + commission;
         double balanceAfter = balance - withdrawAfter;
 
-        if (withdrawAfter < balance) {
+        if (withdrawAfter <= balance) {
             System.out.println("OK" + " " + commissionRate + " " + balanceAfter);
         } else {
             System.out.println("NO");
