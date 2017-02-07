@@ -1,15 +1,18 @@
 package module2.homework;
 
-public class Bank {
+public class CashWithdrawal {
 
     public static void withdrawBalance(double balance, double withdrawal) {
-        double commission = withdrawal * 0.05;
+        double commissionRate = 0.05;
+        double commission = withdrawal * commissionRate;
         double withdrawAfter = withdrawal + commission;
+        double balanceAfter = balance - withdrawAfter;
 
-        if (withdrawAfter > balance)
+        if (withdrawAfter < balance) {
+            System.out.println("OK" + " " + commissionRate + " " + balanceAfter);
+        } else {
             System.out.println("NO");
-        else
-            System.out.println("OK" + " " + "0.5" + " " + (balance - withdrawAfter ));
+        }
     }
 
     public static void main(String[] args) {
