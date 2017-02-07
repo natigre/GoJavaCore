@@ -40,7 +40,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return sum;
     }
@@ -53,8 +52,7 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
-        }
+    }
         return sum;
     }
 
@@ -68,7 +66,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return min;
     }
@@ -83,7 +80,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return min;
     }
@@ -98,7 +94,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return max;
     }
@@ -113,7 +108,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return max;
     }
@@ -128,7 +122,6 @@ public class ArrayArithmeticActions {
             }
         else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return maxPositive;
     }
@@ -142,7 +135,6 @@ public class ArrayArithmeticActions {
                 }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return maxPositive;
     }
@@ -183,7 +175,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return c;
     }
@@ -198,7 +189,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return mod;
     }
@@ -216,7 +206,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return intArray[intArray.length - 2];
     }
@@ -234,7 +223,6 @@ public class ArrayArithmeticActions {
             }
         } else {
             System.out.print("No array is provided. ");
-            return 0;
         }
         return doubleArray[doubleArray.length - 2];
     }
