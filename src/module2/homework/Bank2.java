@@ -2,30 +2,33 @@ package module2.homework;
 
 public class Bank2 {
     public static void main(String[] args) {
-
         int[] balances = {1200, 250, 2000, 500, 3200};
         String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
 
-        String ownerName = "Ann";
-        double withdrawal = 100;
-        withdrawBalance(ownerName, ownerNames, balances, withdrawal);
+        String ownerName1 = "Ann";
+        double withdrawal3 = 100;
 
-        ownerName = "Oww";
-        withdrawal = 490;
-        withdrawBalance(ownerName, ownerNames, balances, withdrawal);
+        String ownerName2 = "Oww";
+        double withdrawal4 = 490;
+
+        withdraw_money(ownerName1, withdrawal3, ownerNames, balances);
+        System.out.println("");
+        withdraw_money(ownerName2, withdrawal4, ownerNames, balances);
     }
 
-    static void withdrawBalance(String ownerName, String[] ownerNames, int[] balances, double withdrawal) {
+
+    public static int[] withdraw_money(String ownerName, double withdrawal, String[] array, int[] balance) {
+
         double commision_rate = 0.05;
         double commision = (withdrawal * commision_rate);
         int count = 0;
 
-        for (int i = 0; i < ownerNames.length; i++) {
-            if (ownerName == (ownerNames[i])) {
-                double balance = balances[i] - (withdrawal + commision);
-                if ((withdrawal + commision) <= balances[i]) {
-                    System.out.println(ownerName + " " + (int) withdrawal + " " + (int) balance);
-                    balances[i] = (int) balance;
+        for (int i = 0; i < array.length; i++) {
+            if (ownerName == array[i]) {
+                double new_balance = balance[i] - (withdrawal + commision);
+                if ((withdrawal + commision) <= balance[i]) {
+                    System.out.println(ownerName + " " + (int) withdrawal + " " + (int) new_balance);
+                    balance[i] = (int) new_balance;
                 } else {
                     System.out.println("NO");
                 }
@@ -33,11 +36,10 @@ public class Bank2 {
                 count++;
             }
         }
+
+        if (count == array.length)
+            System.out.println("No client found");
+        return balance;
     }
 }
-
-
-
-
-
 
