@@ -11,6 +11,5 @@ public class Main {
         bird.sing("flying");
         bird.sing("singing");
         bird.sing("bird");
-
     }
 }
