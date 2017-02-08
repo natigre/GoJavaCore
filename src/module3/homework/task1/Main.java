@@ -7,9 +7,7 @@ public class Main {
         System.out.println("I'm  " + bird.getName());
         System.out.println("==================");
 
-        bird.sing("walking");
-        bird.sing("flying");
-        bird.sing("singing");
-        bird.sing("bird");
+        bird.sing();
+
     }
 }

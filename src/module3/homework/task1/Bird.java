@@ -7,8 +7,11 @@ public class Bird {
         this.name = name;
     }
 
-    public void sing(String word) {
-        System.out.println("I am " + word);
+    public void sing() {
+        System.out.println("I am walking");
+        System.out.println("I am flying");
+        System.out.println("I am singing");
+        System.out.println("I am bird");
     }
 
     public String getName() {
