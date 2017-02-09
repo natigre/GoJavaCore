@@ -57,7 +57,7 @@ public class ArrayArithmeticActions {
     }
 
     static int getMinElement(int intArray[]) {
-        int min = 0;
+        int min = intArray[0];
         if (intArray != null) {
             for (int i = 0; i <= intArray.length - 1; i++) {
                 if (intArray[i] < min) {
@@ -71,7 +71,7 @@ public class ArrayArithmeticActions {
     }
 
     static double getMinElement(double doubleArray[]) {
-        double min = 0;
+        double min = doubleArray[0];
         if (doubleArray != null) {
             for (int i = 0; i <= doubleArray.length - 1; i++) {
                 if (doubleArray[i] < min) {
@@ -85,7 +85,7 @@ public class ArrayArithmeticActions {
     }
 
     static int getMaxElement(int intArray[]) {
-        int max = 0;
+        int max = intArray[0];
         if (intArray != null) {
             for (int i = 0; i <= intArray.length - 1; i++) {
                 if (intArray[i] > max) {
@@ -99,7 +99,7 @@ public class ArrayArithmeticActions {
     }
 
     static double getMaxElement(double doubleArray[]) {
-        double max = 0;
+        double max = doubleArray[0];
         if (doubleArray != null) {
             for (int i = 0; i <= doubleArray.length - 1; i++) {
                 if (doubleArray[i] > max) {
@@ -113,7 +113,7 @@ public class ArrayArithmeticActions {
     }
 
     static int getMaxPositiveElement(int intArray[]) {
-        int maxPositive = 0;
+        int maxPositive = intArray[0];
         if (intArray != null)
             for (int i = 0; i <= intArray.length - 1; i++) {
                 if (intArray[i] > 0 && intArray[i] > maxPositive) {
@@ -127,7 +127,7 @@ public class ArrayArithmeticActions {
     }
 
     static double getMaxPositiveElement(double doubleArray[]) {
-        double maxPositive = 0;
+        double maxPositive = doubleArray[0];
         if (doubleArray != null) {
             for (int i = 0; i <= doubleArray.length - 1; i++)
                 if (doubleArray[i] > 0 && doubleArray[i] > maxPositive) {
