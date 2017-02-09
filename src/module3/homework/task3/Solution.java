@@ -1,7 +1,5 @@
 package module3.homework.task3;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -46,6 +44,7 @@ public class Solution {
         System.out.println(student5.getLastName() + " "
                 + student5.getCollegeName() + " "
                 + student5.getId());
+
         System.out.println("\n=============================\n");
 
         SpecialStudent student6 = new SpecialStudent("Ohanov", coursesTaken);
@@ -60,6 +59,5 @@ public class Solution {
 
         student6.setEmail("oganov88@mail.com");
         System.out.println("Email of student6 is: " + student6.getEmail());
-
     }
 }
