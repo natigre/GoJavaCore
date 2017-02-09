@@ -50,4 +50,12 @@ public class Course {
     public void setTeacherName(String teacherName) {
         this.teacherName = teacherName;
     }
+
+    @Override
+    public String toString() {
+        return  "\n" + "Course: " +
+                " name= " + name +
+                ", hoursDuration= " + hoursDuration +
+                ", teacherName= " + teacherName;
+    }
 }

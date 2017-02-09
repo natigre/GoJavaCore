@@ -1,5 +1,6 @@
 package module3.homework.task3;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -20,6 +21,10 @@ public class Solution {
         System.out.println("\n=============================\n");
 
         Course[] coursesTaken = {course1, course2, course3, course4, course5};
+//        for (int i = 0; i < coursesTaken.length ; i++) {
+//            System.out.println(coursesTaken[i]);
+//        }
+//        System.out.println("\n=============================\n");
 
         Student student1 = new Student("Alex", "Rude", 5);
         Student student2 = new Student("Maluj", coursesTaken);
@@ -29,7 +34,7 @@ public class Solution {
                 + student1.getGroup());
         System.out.println("Age of student1 is: " + student1.getAge());
         System.out.println(student2.getLastName() + " "
-                + student2.getCoursesTaken()); //how to input of array?
+                + Arrays.toString(student2.getCoursesTaken()));
 
         System.out.println("\n=============================\n");
 
@@ -39,17 +44,18 @@ public class Solution {
         System.out.println(student3.getFirstName() + " "
                 + student3.getLastName() + " "
                 + student3.getGroup());
-        System.out.println(student4.getLastName() + " "
-                + student4.getCoursesTaken()); //how to input of array?
         System.out.println(student5.getLastName() + " "
                 + student5.getCollegeName() + " "
                 + student5.getId());
+        System.out.println(student4.getLastName() + " "
+                + Arrays.toString(student4.getCoursesTaken()));
+
 
         System.out.println("\n=============================\n");
 
         SpecialStudent student6 = new SpecialStudent("Ohanov", coursesTaken);
         SpecialStudent student7 = new SpecialStudent("Katie", "Sova", 5, "KDPNU", 78, 10000008514L);
-        SpecialStudent student8 = new SpecialStudent("Olena", "Marchenro", 5, 95124);
+        SpecialStudent student8 = new SpecialStudent("Olena", "Marchenko", 5, 95124);
         System.out.println(student7.getLastName() + " "
                 + student7.getCollegeName() + " "
                 + student7.getId());
