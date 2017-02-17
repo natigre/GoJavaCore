@@ -20,13 +20,11 @@ public class Solution {
                 + course2.getName() + " "
                 + course2.getTeacherName());
         System.out.println(course5.getStartDate().getTime() + " " + course5.getTeacherName());
-        System.out.println("\n=============================\n");
 
         Course[] coursesTaken = {course1, course2, course3, course4, course5};
 //        for (int i = 0; i < coursesTaken.length ; i++) {
 //            System.out.println(coursesTaken[i]);
 //        }
-//        System.out.println("\n=============================\n");
 
         Student student1 = new Student("Alex", "Rude", 5);
         Student student2 = new Student("Maluj", coursesTaken);
@@ -37,8 +35,6 @@ public class Solution {
         System.out.println("Age of student1 is: " + student1.getAge());
         System.out.println(student2.getLastName() + " "
                 + Arrays.toString(student2.getCoursesTaken()));
-
-        System.out.println("\n=============================\n");
 
         CollegeStudent student3 = new CollegeStudent("Egor", "Linnik", 5);
         CollegeStudent student4 = new CollegeStudent("Hrebeniuk", coursesTaken);
@@ -52,9 +48,6 @@ public class Solution {
         System.out.println(student4.getLastName() + " "
                 + Arrays.toString(student4.getCoursesTaken()));
 
-
-        System.out.println("\n=============================\n");
-
         SpecialStudent student6 = new SpecialStudent("Ohanov", coursesTaken);
         SpecialStudent student7 = new SpecialStudent("Katie", "Sova", 5, "KDPNU", 78, 10000008514L);
         SpecialStudent student8 = new SpecialStudent("Olena", "Marchenko", 5, 95124);
@@ -63,7 +56,6 @@ public class Solution {
                 + student7.getId());
         System.out.println(student8.getLastName() + " "
                 + student8.getGroup());
-        System.out.println("\n=============================\n");
 
         student6.setEmail("oganov88@mail.com");
         System.out.println("Email of student6 is: " + student6.getEmail());
