@@ -4,10 +4,12 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import static java.util.Calendar.*;
+
 public class Solution {
     public static void main(String[] args) {
 
-        GregorianCalendar startDate = new GregorianCalendar(2016, Calendar.SEPTEMBER, 20);
+        GregorianCalendar startDate = new GregorianCalendar(2016, SEPTEMBER, 20);
 
         Course course1 = new Course(startDate, "Harrison");
         Course course2 = new Course(240, "JavaSript", "Morgan");
