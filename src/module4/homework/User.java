@@ -88,4 +88,35 @@ public class User {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        if (getId() != user.getId()) return false;
+        if (Double.compare(user.getBalance(), getBalance()) != 0) return false;
+        if (getMonthsOfEmployment() != user.getMonthsOfEmployment()) return false;
+        if (getSalary() != user.getSalary()) return false;
+        if (!getName().equals(user.getName())) return false;
+        if (!getCompanyName().equals(user.getCompanyName())) return false;
+        return getBank().equals(user.getBank());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = (int) (getId() ^ (getId() >>> 32));
+        result = 31 * result + getName().hashCode();
+        temp = Double.doubleToLongBits(getBalance());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + getMonthsOfEmployment();
+        result = 31 * result + getCompanyName().hashCode();
+        result = 31 * result + getSalary();
+        result = 31 * result + getBank().hashCode();
+        return result;
+    }
 }
