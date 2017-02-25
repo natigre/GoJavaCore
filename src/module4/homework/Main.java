@@ -2,9 +2,9 @@ package module4.homework;
 
 public class Main {
     public static void main(String[] args) {
-        Bank usBank = new USBank(12540, "USA", Currency.USD, 30, 20000, 5, 10000000);
-        Bank euBank = new EUBank(15510, "Italy", Currency.EUR, 150, 10000, 10, 6000000);
-        Bank chinaBank = new ChinaBank(12420, "China", Currency.USD, 1020, 8000, 25, 500000);
+        Bank usBank = new USBank(12540, "USA", Currency.USD, 30, 20000, 5, 10000000L);
+        Bank euBank = new EUBank(15510, "Italy", Currency.EUR, 150, 10000, 10, 6000000L);
+        Bank chinaBank = new ChinaBank(12420, "China", Currency.USD, 1020, 8000, 25, 500000L);
 
         User user1 = new User(12983736256L, "Lesya", 223, 23, "Company1", 23000, usBank);
         User user2 = new User(23985746389L, "Ihor", 2200, 2, "Company2", 5000, euBank);

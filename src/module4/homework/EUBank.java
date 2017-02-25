@@ -1,5 +1,8 @@
 package module4.homework;
 
+import static module4.homework.Currency.*;
+import static module4.homework.Currency.USD;
+
 public class EUBank extends Bank {
 
 
@@ -9,10 +12,10 @@ public class EUBank extends Bank {
     }
 
     @Override
-    int getLimitOfWithdrawal() {
-        if (getCurrency() == Currency.USD) {
+    public int getLimitOfWithdrawal() {
+        if (getCurrency() == USD) {
             return 2000;
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             return 2200;
         } else {
             return -1;
@@ -20,10 +23,10 @@ public class EUBank extends Bank {
     }
 
     @Override
-    int getLimitOfFunding() {
-        if (getCurrency() == Currency.USD) {
+    public int getLimitOfFunding() {
+        if (getCurrency() == USD) {
             return 10000;
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             return 20000;
         } else {
             return -1;
@@ -31,10 +34,10 @@ public class EUBank extends Bank {
     }
 
     @Override
-    int getMonthlyRate() {
-        if (getCurrency() == Currency.USD) {
+    public int getMonthlyRate() {
+        if (getCurrency() == USD) {
             return 0;
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             return 1;
         } else {
             return -1;
@@ -42,14 +45,14 @@ public class EUBank extends Bank {
     }
 
     @Override
-    int getCommission(int sum) {
-        if (getCurrency() == Currency.USD) {
+    public int getCommission(int sum) {
+        if (getCurrency() == USD) {
             if (sum <= 1000) {
                 return 5;
             } else {
                 return 7;
             }
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             if (sum <= 1000) {
                 return 2;
             } else {

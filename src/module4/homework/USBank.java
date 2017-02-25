@@ -9,7 +9,7 @@ public class USBank extends Bank {
     }
 
     @Override
-    int getLimitOfWithdrawal() {
+    public int getLimitOfWithdrawal() {
         if (getCurrency() == Currency.USD) {
             return 1000;
         } else if (getCurrency() == Currency.EUR) {
@@ -20,7 +20,7 @@ public class USBank extends Bank {
     }
 
     @Override
-    int getLimitOfFunding() {
+    public int getLimitOfFunding() {
         if (getCurrency() == Currency.EUR) {
             return 10000;
         } else if (getCurrency() == Currency.USD) {
@@ -31,7 +31,7 @@ public class USBank extends Bank {
     }
 
     @Override
-    int getMonthlyRate() {
+    public int getMonthlyRate() {
         if (getCurrency() == Currency.USD) {
             return 1;
         } else if (getCurrency() == Currency.EUR) {
@@ -42,7 +42,7 @@ public class USBank extends Bank {
     }
 
     @Override
-    int getCommission(int sum) {
+    public int getCommission(int sum) {
         if (getCurrency() == Currency.USD) {
             if (sum <= 1000) {
                 return 5;

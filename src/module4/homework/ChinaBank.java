@@ -1,5 +1,8 @@
 package module4.homework;
 
+import static module4.homework.Currency.*;
+import static module4.homework.Currency.USD;
+
 public class ChinaBank extends Bank {
 
     public ChinaBank(long id, String bankCountry, Currency currency,
@@ -8,10 +11,10 @@ public class ChinaBank extends Bank {
     }
 
     @Override
-    int getLimitOfWithdrawal() {
-        if (getCurrency() == Currency.USD) {
+    public int getLimitOfWithdrawal() {
+        if (getCurrency() == USD) {
             return 100;
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             return 150;
         } else {
             return -1;
@@ -19,10 +22,10 @@ public class ChinaBank extends Bank {
     }
 
     @Override
-    int getLimitOfFunding() {
-        if (getCurrency() == Currency.USD) {
+    public int getLimitOfFunding() {
+        if (getCurrency() == USD) {
             return 10000;
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             return 5000;
         } else {
             return -1;
@@ -30,10 +33,10 @@ public class ChinaBank extends Bank {
     }
 
     @Override
-    int getMonthlyRate() {
-        if (getCurrency() == Currency.USD) {
+    public int getMonthlyRate() {
+        if (getCurrency() == USD) {
             return 1;
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             return 0;
         } else {
             return -1;
@@ -41,14 +44,14 @@ public class ChinaBank extends Bank {
     }
 
     @Override
-    int getCommission(int sum) {
-        if (getCurrency() == Currency.USD) {
+    public int getCommission(int sum) {
+        if (getCurrency() == USD) {
             if (sum <= 1000) {
                 return 3;
             } else {
                 return 5;
             }
-        } else if (getCurrency() == Currency.EUR) {
+        } else if (getCurrency() == EUR) {
             if (sum <= 1000) {
                 return 10;
             } else {

@@ -3,7 +3,7 @@ package module4.homework;
 public class BankSystemImpl implements BankSystem {
     @Override
     public void withdrawOfUser(User user, int amount) {
-        double balance = user.getBank().getCommission(amount);
+        double balance = user.getBalance();
         int commissionWithdraw = user.getBank().getCommission(amount);
         double withdrawalCommission = amount * commissionWithdraw / 100;
         int limitOfWithdraw = user.getBank().getLimitOfWithdrawal();
