@@ -20,12 +20,15 @@ public class BankSystemImpl implements BankSystem {
     @Override
     public void fundUser(User user, int amount) {
         double balance = user.getBalance();
-        int fundLimit = user.getBank().getLimitOfFunding();
-        if (amount > fundLimit) {
-            System.out.println("Canceled. You have exceeded the limit of funding for " + user.getBank().getLimitOfFunding());
-        } else {
-            user.setBalance(balance + amount);
-            System.out.println("Success. ");
+        Bank bank = user.getBank();
+        if (bank != null) {
+            int fundLimit = bank.getLimitOfFunding();
+            if (amount > fundLimit) {
+                System.out.println("Canceled. You have exceeded the limit of funding for " + bank.getLimitOfFunding());
+            } else {
+                user.setBalance(balance + amount);
+                System.out.println("Success. ");
+            }
         }
     }
 
@@ -46,8 +49,11 @@ public class BankSystemImpl implements BankSystem {
     public void paySalary(User user) {
         double balance = user.getBalance();
         double salary = user.getSalary();
-        double commission = balance * user.getBank().getMonthlyRate() / 100;
-        user.setBalance(balance + salary - commission);
-        System.out.println("Success. ");
+        Bank bank = user.getBank();
+        if (bank != null ) {
+            double commission = balance * bank.getMonthlyRate() / 100;
+            user.setBalance(balance + salary - commission);
+            System.out.println("Success. ");
+        }
     }
 }
