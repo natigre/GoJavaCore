@@ -4,11 +4,12 @@ public class BankSystemImpl implements BankSystem {
     @Override
     public void withdrawOfUser(User user, int amount) {
         double balance = user.getBalance();
-        int commissionWithdraw = user.getBank().getCommission(amount);
+        Bank bank = user.getBank();
+        int commissionWithdraw = bank.getCommission(amount);
         double withdrawalCommission = amount * commissionWithdraw / 100;
-        int limitOfWithdraw = user.getBank().getLimitOfWithdrawal();
+        int limitOfWithdraw = bank.getLimitOfWithdrawal();
         if (amount > limitOfWithdraw) {
-            System.out.println("Canceled. You have exceeded the limit of withdrawal of " + user.getBank().getLimitOfWithdrawal());
+            System.out.println("Canceled. You have exceeded the limit of withdrawal of " + bank.getLimitOfWithdrawal());
         } else if (amount + withdrawalCommission > balance) {
             System.out.println("Canceled. This operation cannot be performed.");
         } else {
