@@ -1,6 +1,6 @@
 package module6.homework.task_6_2;
 
-public class User {
+public final class User {
     private long id;
     private String firstName;
     private String lastName;
