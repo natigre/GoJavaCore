@@ -1,4 +1,4 @@
-package module6.homework.task_6_2;
+package module6.homework.task2;
 
 public final class User {
     private long id;
@@ -49,6 +49,11 @@ public final class User {
                 ", balance=" + balance +
                 '}';
     }
+
+    public void paySalary() {
+        balance+= salary;
+    }
+
 
     public long getId() {
         return id;

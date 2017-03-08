@@ -1,4 +1,4 @@
-package module6.homework.task_6_4;
+package module6.homework.task4;
 
 public class CitizenMain {
     public static void main(String[] args) {
