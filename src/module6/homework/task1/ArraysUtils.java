@@ -118,7 +118,7 @@ public final class ArraysUtils {
     public static int[] findEvenElements(int[] intArray) {
         int[] evenElementsOfArray = new int[0];
         if (intArray != null) {
-            for (int i = 0; i < intArray.length / 2; i++) {
+            for (int i = 0; i < intArray.length; i++) {
                 if (intArray[i] % 2 == 0) {
                     evenElementsOfArray = Arrays.copyOf(evenElementsOfArray, evenElementsOfArray.length + 1);
                     evenElementsOfArray[evenElementsOfArray.length - 1] = intArray[i];
