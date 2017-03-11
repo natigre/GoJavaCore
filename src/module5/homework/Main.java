@@ -3,19 +3,19 @@ package module5.homework;
 public class Main {
     public static void main(String[] args) {
 
-        Controller controller = new Controller();
+        ProductController productController = new ProductController();
         System.out.println("Request rooms ");
-        controller.requestRooms(560, 2, "Krivij Rih", "Druzhba");
-        controller.requestRooms(400, 1, "Krivij Rih", "Richka");
-        controller.requestRooms(620, 2, "Krivij Rih", "West");
+        productController.requestRooms(560, 2, "Krivij Rih", "Druzhba");
+        productController.requestRooms(400, 1, "Krivij Rih", "Richka");
+        productController.requestRooms(620, 2, "Krivij Rih", "West");
         System.out.println("");
 
-        API api1 = new GoogleAPI();
-        API api2 = new BookingComAPI();
-        API api3 = new TripAdvisorAPI();
+        BaseApi baseApi1 = new GoogleApi();
+        BaseApi baseApi2 = new BookingComApi();
+        BaseApi baseApi3 = new TripAdvisorApi();
         System.out.println("Check matches in apis ");
-        controller.check(api1, api2);
-        controller.check(api3, api1);
-        controller.check(api2, api3);
+        productController.check(baseApi1, baseApi2);
+        productController.check(baseApi3, baseApi1);
+        productController.check(baseApi2, baseApi3);
     }
 }

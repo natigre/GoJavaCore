@@ -2,10 +2,10 @@ package module5.homework;
 
 import java.util.Date;
 
-public class BookingComAPI implements API {
+public class BookingComApi implements BaseApi {
     private Room[] rooms = new Room[5];
 
-    public BookingComAPI() {
+    public BookingComApi() {
         Date date = new Date();
         rooms[0] = new Room(14, 420, 1, date, "West", "Krivij Rih");
         rooms[1] = new Room(20, 360, 1, date, "Saksagan", "Krivij Rih");

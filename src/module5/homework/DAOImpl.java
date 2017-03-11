@@ -10,7 +10,7 @@ public class DAOImpl implements DAO {
 
     @Override
     public boolean delete(Room room) {
-        System.out.println("The room " + room.toString() + " has been deleted."); //room.getClass()
+        System.out.println("The room " + room.toString() + " has been deleted.");
         return false;
     }
 

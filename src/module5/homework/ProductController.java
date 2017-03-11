@@ -1,20 +1,20 @@
 package module5.homework;
 
-public class Controller {
+public class ProductController {
 
-    private API apis[] = new API[3];
+    private BaseApi baseApis[] = new BaseApi[3];
 
-        public Controller() {
-        apis[0] = new BookingComAPI();
-        apis[1] = new GoogleAPI();
-        apis[2] = new TripAdvisorAPI();
+        public ProductController() {
+        baseApis[0] = new BookingComApi();
+        baseApis[1] = new GoogleApi();
+        baseApis[2] = new TripAdvisorApi();
     }
 
     public Room[] requestRooms(int price, int persons, String city, String hotel) {
 
-        Room[] bookingCom = apis[0].findRooms(price, persons, city, hotel);
-        Room[] tripAdvisor = apis[1].findRooms(price, persons, city, hotel);
-        Room[] google = apis[2].findRooms(price, persons, city, hotel);
+        Room[] bookingCom = baseApis[0].findRooms(price, persons, city, hotel);
+        Room[] tripAdvisor = baseApis[1].findRooms(price, persons, city, hotel);
+        Room[] google = baseApis[2].findRooms(price, persons, city, hotel);
 
         // create new array for all elements
         Room rooms[] = new Room[bookingCom.length + tripAdvisor.length + google.length];
@@ -28,9 +28,9 @@ public class Controller {
         return rooms;
     }
 
-    public Room[] check(API api1, API api2) {
-        Room[] roomApi1 = api1.getAll();
-        Room[] roomApi2 = api2.getAll();
+    public Room[] check(BaseApi baseApi1, BaseApi baseApi2) {
+        Room[] roomApi1 = baseApi1.getAll();
+        Room[] roomApi2 = baseApi2.getAll();
         Room[] checkedRooms = new Room[10];
         for (int i = 0; i < roomApi1.length; i++) {
             for (int j = 0; j < roomApi2.length; j++) {
