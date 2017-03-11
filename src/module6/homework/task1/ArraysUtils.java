@@ -124,7 +124,9 @@ public final class ArraysUtils {
                     evenElementsOfArray[evenElementsOfArray.length - 1] = intArray[i];
                 }
             }
-        }
+        } else {
+        System.out.print("No array is provided. ");
+    }
         return evenElementsOfArray;
     }
 }

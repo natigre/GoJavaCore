@@ -19,14 +19,14 @@ public class ArraysMain {
 
         System.out.println("The modulus of elements of intArray is: " + ArraysUtils.getModulus(intArray));
 
-        System.out.println("The second largest element of intArray is : " +
+        System.out.println("The second largest element of intArray is: " +
                 ArraysUtils.getSecondLargestElement(intArray));
 
         int[] reverseintArray = ArraysUtils.reverse(intArray);
-        System.out.println("Reverse array = " + Arrays.toString(reverseintArray));
+        System.out.println("The reverse array is: " + Arrays.toString(reverseintArray));
 
         int[] evenElementsOfArray = ArraysUtils.findEvenElements(intArray);
-        System.out.println("Even elements = " + Arrays.toString(evenElementsOfArray));
+        System.out.println("The even elements of intArray is : = " + Arrays.toString(evenElementsOfArray));
 
 
     }
