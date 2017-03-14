@@ -10,9 +10,9 @@ public class Main {
         productController.requestRooms(620, 2, "Krivij Rih", "West");
         System.out.println("");
 
-        BaseApi baseApi1 = new GoogleBaseApi();
-        BaseApi baseApi2 = new BookingComBaseApi();
-        BaseApi baseApi3 = new TripAdvisorBaseApi();
+        BaseApi baseApi1 = new GoogleApi();
+        BaseApi baseApi2 = new BookingComApi();
+        BaseApi baseApi3 = new TripAdvisorApi();
         System.out.println("Check matches in apis ");
         productController.check(baseApi1, baseApi2);
         productController.check(baseApi3, baseApi1);
