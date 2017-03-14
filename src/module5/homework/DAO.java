@@ -4,5 +4,5 @@ public interface DAO {
     Room save (Room room);
     boolean delete (Room room);
     Room update (Room room);
-    Room findByID (Room room);
+    Room findByID (long id);
 }

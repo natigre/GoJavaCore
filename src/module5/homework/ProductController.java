@@ -5,9 +5,9 @@ public class ProductController {
     private BaseApi baseApis[] = new BaseApi[3];
 
         public ProductController() {
-        baseApis[0] = new BookingComApi();
-        baseApis[1] = new GoogleApi();
-        baseApis[2] = new TripAdvisorApi();
+        baseApis[0] = new BookingComBaseApi();
+        baseApis[1] = new GoogleBaseApi();
+        baseApis[2] = new TripAdvisorBaseApi();
     }
 
     public Room[] requestRooms(int price, int persons, String city, String hotel) {
