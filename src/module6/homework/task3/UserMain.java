@@ -30,9 +30,7 @@ public class UserMain {
             System.out.println(user);
         }
 
-        //        System.out.println("Test immutable " + users[0].getBalance());
-
-        long[] userId = UserUtils.getUserId(users);
+        long[] userId = UserUtils.getIds(users);
         System.out.println(Arrays.toString(userId));
 
         for (User user : UserUtils.deleteEmptyUsers(users)) {

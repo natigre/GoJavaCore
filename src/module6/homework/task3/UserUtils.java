@@ -2,6 +2,7 @@ package module6.homework.task3;
 
 import module6.homework.task2.User;
 import java.util.Arrays;
+import static java.lang.System.arraycopy;
 
 public class UserUtils {
 
@@ -13,6 +14,7 @@ public class UserUtils {
                 for (User uniqueU : uniqueUsers) {
                     if (user.equals(uniqueU)) {
                         checkedUser = false;
+                        break;
                     }
                 }
                 if (checkedUser) {
@@ -45,7 +47,7 @@ public class UserUtils {
         return users;
     }
 
-    public static final long[] getUserId(User[] users) {
+    public static final long[] getIds(User[] users) {
         long[] userId = new long[users.length];
         for (int i = 0; i < users.length; i++) {
             if (users[i] != null) {
@@ -59,7 +61,7 @@ public class UserUtils {
     public static User[] deleteEmptyUsers(User[] users) {
         for (int i = 0; i < users.length; i++) {
             if (users[i] == null) {
-                System.arraycopy(users, i + 1, users, i, users.length - i - 1 );
+                arraycopy(users, i + 1, users, i, users.length - i - 1 );
                 users = Arrays.copyOfRange(users, 0, users.length - 1);
             }
         }

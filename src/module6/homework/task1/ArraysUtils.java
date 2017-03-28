@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public final class ArraysUtils {
 
-    public static int getSumOfElements(int[] intArray) {
+    public static int getSumOfElements(int[] array) {
         int sum = 0;
-        if (intArray != null) {
-            for (int i = 0; i < intArray.length; i++) {
-                sum += intArray[i];
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                sum += array[i];
             }
         } else {
             System.out.print("No array is provided. ");
@@ -16,12 +16,12 @@ public final class ArraysUtils {
         return sum;
     }
 
-    public static int getMinElement(int[] intArray) {
-        int min = intArray[0];
-        if (intArray != null) {
-            for (int i = 0; i <= intArray.length - 1; i++) {
-                if (intArray[i] < min) {
-                    min = intArray[i];
+    public static int getMinElement(int[] array) {
+        int min = array[0];
+        if (array != null) {
+            for (int i = 0; i <= array.length - 1; i++) {
+                if (array[i] < min) {
+                    min = array[i];
                 }
             }
         } else {
@@ -30,12 +30,12 @@ public final class ArraysUtils {
         return min;
     }
 
-    public static int getMaxElement(int[] intArray) {
-        int max = intArray[0];
-        if (intArray != null) {
-            for (int i = 0; i <= intArray.length - 1; i++) {
-                if (intArray[i] > max) {
-                    max = intArray[i];
+    public static int getMaxElement(int[] array) {
+        int max = array[0];
+        if (array != null) {
+            for (int i = 0; i <= array.length - 1; i++) {
+                if (array[i] > max) {
+                    max = array[i];
                 }
             }
         } else {
@@ -44,12 +44,12 @@ public final class ArraysUtils {
         return max;
     }
 
-    public static int getMaxPositiveElement(int[] intArray) {
-        int maxPositive = intArray[0];
-        if (intArray != null)
-            for (int i = 0; i <= intArray.length - 1; i++) {
-                if (intArray[i] > 0 && intArray[i] > maxPositive) {
-                    maxPositive = intArray[i];
+    public static int getMaxPositiveElement(int[] array) {
+        int maxPositive = array[0];
+        if (array != null)
+            for (int i = 0; i <= array.length - 1; i++) {
+                if (array[i] > 0 && array[i] > maxPositive) {
+                    maxPositive = array[i];
                 }
             }
         else {
@@ -58,70 +58,70 @@ public final class ArraysUtils {
         return maxPositive;
     }
 
-    public static int getMiltiplicatoinOfElements(int[] intArray) {
+    public static int getMiltiplicatoinOfElements(int[] array) {
+        if (array != null) {
         int multiplication = 1;
-        if (intArray != null) {
-            for (int i = 0; i < intArray.length; i++) {
-                multiplication *= intArray[i];
+            for (int i = 0; i < array.length; i++) {
+                multiplication *= array[i];
             }
+            return multiplication;
         } else {
             System.out.print("No array is provided. ");
             return 0;
         }
-        return multiplication;
     }
 
-    public static int getModulus(int[] intArray) {
-        int c = 0;
-        if (intArray != null) {
-            if (intArray[intArray.length - 1] == 0) {
+    public static int getModulus(int[] array) {
+        int result = 0;
+        if (array != null) {
+            if (array[array.length - 1] == 0) {
                 System.out.println("NO");
             } else {
-                c = intArray[0] % intArray[intArray.length - 1];
+                result = array[0] % array[array.length - 1];
             }
         } else {
             System.out.print("No array is provided. ");
         }
-        return c;
+        return result;
     }
 
-    public static int getSecondLargestElement(int[] intArray) {
-        if (intArray != null) {
-            for (int i = intArray.length - 1; i > 0; i--) {
+    public static int getSecondLargestElement(int[] array) {
+        if (array != null) {
+            for (int i = array.length - 1; i > 0; i--) {
                 for (int j = 0; j < i; j++) {
-                    if (intArray[j] > intArray[j + 1]) {
-                        int tmp = intArray[j + 1];
-                        intArray[j + 1] = intArray[j];
-                        intArray[j] = tmp;
+                    if (array[j] > array[j + 1]) {
+                        int tmp = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = tmp;
                     }
                 }
             }
         } else {
             System.out.print("No array is provided. ");
         }
-        return intArray[intArray.length - 2];
+        return array[array.length - 2];
     }
 
-    public static int[] reverse(int[] intArray) {
-        int[] reverseintArray = new int[intArray.length];
-        if (intArray != null) {
-            for (int i = 0; i <= intArray.length / 2; i++) {
-                reverseintArray[i] = intArray[intArray.length - i - 1];
-                reverseintArray[intArray.length - i - 1] = intArray[i];
+    public static int[] reverse(int[] array) {
+        int[] reverseArray = new int[array.length];
+        if (array != null) {
+            for (int i = 0; i <= array.length / 2; i++) {
+                reverseArray[i] = array[array.length - i - 1];
+                reverseArray[array.length - i - 1] = array[i];
             }
         } else {
             System.out.print("No array is provided. ");
         }
-        return reverseintArray;
+        return reverseArray;
     }
 
-    public static int[] findEvenElements(int[] intArray) {
+    public static int[] findEvenElements(int[] array) {
         int[] evenElementsOfArray = new int[0];
-        if (intArray != null) {
-            for (int i = 0; i < intArray.length; i++) {
-                if (intArray[i] % 2 == 0) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
                     evenElementsOfArray = Arrays.copyOf(evenElementsOfArray, evenElementsOfArray.length + 1);
-                    evenElementsOfArray[evenElementsOfArray.length - 1] = intArray[i];
+                    evenElementsOfArray[evenElementsOfArray.length - 1] = array[i];
                 }
             }
         } else {
