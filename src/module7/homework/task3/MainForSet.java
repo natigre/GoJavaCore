@@ -2,7 +2,6 @@ package module7.homework.task3;
 
 import module7.homework.task1.*;
 import module7.homework.task1.Currency;
-
 import java.util.*;
 
 import static module7.homework.task1.Currency.UAH;
@@ -36,11 +35,14 @@ public class MainForSet {
         orderTreeSet.add(new Order(54, 250, USD, "Bicycle", "Rozetka", user6));
 
         System.out.println("Check for equality of last name 'Petrov' -  " + checkForUserLastName(orderTreeSet));
-        System.out.println("Order with largest price is " + orderTreeSet);
-        System.out.println("Set with deleted orders, that contain currency USD: " + deleteOrdersWithUSD(orderTreeSet));
-    }
 
-    private static boolean checkForUserLastName(Set<Order> orders) {
+        TreeSet<Order> largestPrice = new TreeSet<>(orderTreeSet);
+        System.out.println("Order with largest price is " + largestPrice.first());
+
+        System.out.println("Set with deleted orders, that contain currency USD: " + deleteOrdersWithUSD(orderTreeSet));
+
+    }
+     private static boolean checkForUserLastName(Set<Order> orders) {
         String lastNameForCheck = "Petrov";
         Iterator<Order> lastName = orders.iterator();
         while (lastName.hasNext()) {
