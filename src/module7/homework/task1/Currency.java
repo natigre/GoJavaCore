@@ -1,4 +1,4 @@
-package module7.homework;
+package module7.homework.task1;
 
 public enum Currency {
     USD,

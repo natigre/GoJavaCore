@@ -1,4 +1,6 @@
-package module7.homework;
+package module7.homework.task2;
+
+import module7.homework.task1.Order;
 
 import java.util.Comparator;
 

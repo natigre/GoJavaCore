@@ -1,10 +1,11 @@
-package module7.homework;
+package module7.homework.task2;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
+import module7.homework.task1.Order;
+import module7.homework.task1.User;
 
 import java.util.*;
 
-import static module7.homework.Currency.*;
+import static module7.homework.task1.Currency.*;
 
 public class Main {
     public static void main(String[] args) {
