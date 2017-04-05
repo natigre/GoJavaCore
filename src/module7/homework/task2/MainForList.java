@@ -1,10 +1,8 @@
 package module7.homework.task2;
 
-import module7.homework.task1.Order;
-import module7.homework.task1.User;
-
+import module7.homework.task1.*;
+import module7.homework.task1.Currency;
 import java.util.*;
-
 import static module7.homework.task1.Currency.*;
 
 public class MainForList {
@@ -53,26 +51,43 @@ public class MainForList {
 
         System.out.println("List with removed duplicates: " + deleteDublicateFromList(orderList));
         System.out.println("List deleted items with price low than 1500: " + deleteOrdersWithLowestPrice(orderList));
+        System.out.println("List separeted by currency: " + separateListByCurrency(orderList));
 
 
     }
 
-    public static List<Order> deleteDublicateFromList(List<Order> orders){
+    public static List<Order> deleteDublicateFromList(List<Order> orders) {
         Set<Order> resultList = new HashSet<>();
         resultList.addAll(orders);
         return new ArrayList<>(resultList);
     }
+
     public static List<Order> deleteOrdersWithLowestPrice(List<Order> orders) {
-        List<Order> result = new ArrayList<>();
-        Iterator<Order> iterPrice = orders.iterator();
-        while (iterPrice.hasNext()) {
-            Order order = iterPrice.next();
-            if (order.getPrice() < 1500){
-                result.add(order);
+        List<Order> resultList = new ArrayList<>();
+        Iterator<Order> iter = orders.iterator();
+        while (iter.hasNext()) {
+            Order order = iter.next();
+            if (order.getPrice() < 1500) {
+                resultList.add(order);
             }
         }
-        return result;
+        return resultList;
     }
 
+    public static Map<Currency, List<Order>> separateListByCurrency(List<Order> ordares) {
+        Map<Currency, List<Order>> resultMap = new HashMap<>();
+        List<Order> listUSD = new ArrayList<>();
+        List<Order> listUAH = new ArrayList<>();
 
+        for(Order order : ordares) {
+            if (order.getCurrency().equals(Currency.UAH)) {
+                listUAH.add(order);
+            } else {
+                listUSD.add(order);
+            }
+        }
+        resultMap.put(UAH, listUAH);
+        resultMap.put(USD, listUSD);
+        return resultMap;
+    }
 }
