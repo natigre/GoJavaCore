@@ -35,7 +35,7 @@ public class MainForSet {
         orderTreeSet.add(new Order(36, 600, UAH, "Armchair", "Rozetka", user10));
         orderTreeSet.add(new Order(54, 250, USD, "Bicycle", "Rozetka", user6));
 
-        System.out.println("Check for equality of last name 'Petrov'; " + checkForUserLastName(orderTreeSet));
+        System.out.println("Check for equality of last name 'Petrov' -  " + checkForUserLastName(orderTreeSet));
         System.out.println("Order with largest price is " + orderTreeSet);
         System.out.println("Set with deleted orders, that contain currency USD: " + deleteOrdersWithUSD(orderTreeSet));
     }
