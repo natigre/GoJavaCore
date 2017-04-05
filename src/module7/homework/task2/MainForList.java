@@ -7,7 +7,7 @@ import java.util.*;
 
 import static module7.homework.task1.Currency.*;
 
-public class Main {
+public class MainForList {
     public static void main(String[] args) {
 
         User user1 = new User(21, "Olga", "Moroz", "Kiyv", 2500);
