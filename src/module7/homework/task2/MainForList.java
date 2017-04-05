@@ -1,11 +1,13 @@
 package module7.homework.task2;
 
+import java.util.*;
 import module7.homework.task1.*;
 import module7.homework.task1.Currency;
-import java.util.*;
 import static module7.homework.task1.Currency.*;
 
 public class MainForList {
+    private static List<Order> orderList = new ArrayList<>(12);
+
     public static void main(String[] args) {
 
         User user1 = new User(21, "Olga", "Moroz", "Kiyv", 2500);
@@ -19,7 +21,6 @@ public class MainForList {
         User user9 = new User(48, "Oleg", "Kuchkin", "Sumy", 3500);
         User user10 = new User(99, "Nina", "Morozenko", "Kiyv", 6600);
 
-        List<Order> orderList = new ArrayList<>(12);
         orderList.add(new Order(125, 250, UAH, "Food", "AUCHAN", user2));
         orderList.add(new Order(228, 500, USD, "Bicycle", "Rozetka", user5));
         orderList.add(new Order(84, 1200, UAH, "Armchair", "Rozetka", user9));
@@ -52,17 +53,15 @@ public class MainForList {
         System.out.println("List with removed duplicates: " + deleteDublicateFromList(orderList));
         System.out.println("List deleted items with price low than 1500: " + deleteOrdersWithLowestPrice(orderList));
         System.out.println("List separeted by currency: " + separateListByCurrency(orderList));
-
-
     }
 
-    public static List<Order> deleteDublicateFromList(List<Order> orders) {
+    private static List<Order> deleteDublicateFromList(List<Order> orders) {
         Set<Order> resultList = new HashSet<>();
         resultList.addAll(orders);
         return new ArrayList<>(resultList);
     }
 
-    public static List<Order> deleteOrdersWithLowestPrice(List<Order> orders) {
+    private static List<Order> deleteOrdersWithLowestPrice(List<Order> orders) {
         List<Order> resultList = new ArrayList<>();
         Iterator<Order> iter = orders.iterator();
         while (iter.hasNext()) {
@@ -74,7 +73,7 @@ public class MainForList {
         return resultList;
     }
 
-    public static Map<Currency, List<Order>> separateListByCurrency(List<Order> ordares) {
+    private static Map<Currency, List<Order>> separateListByCurrency(List<Order> ordares) {
         Map<Currency, List<Order>> resultMap = new HashMap<>();
         List<Order> listUSD = new ArrayList<>();
         List<Order> listUAH = new ArrayList<>();
