@@ -7,19 +7,12 @@ import java.util.Comparator;
 public class SortByItemNameAndShopIdAndCityComparator implements Comparator<Order> {
     @Override
     public int compare(Order o1, Order o2) {
-        String itemName1 = o1.getItemName();
-        String itemName2 = o2.getItemName();
-        String shopIdintificator1 = o1.getShopIdintificator();
-        String shopIdintificator2 = o2.getShopIdintificator();
-        String cityUser1 = o1.getUser().getCity();
-        String cityUser2 = o2.getUser().getCity();
-
-        if (itemName1.compareTo(itemName2) != 0) {
-            return itemName1.compareTo(itemName2);
-        } else if (cityUser1.compareTo(cityUser2) == 0) {
-            return shopIdintificator1.compareTo(shopIdintificator2);
+        if (o1.getItemName().compareTo(o2.getItemName()) != 0) {
+            return o1.getItemName().compareTo(o2.getItemName());
+        } else if (o1.getUser().getCity().compareTo(o2.getUser().getCity()) == 0) {
+            return o1.getShopIdintificator().compareTo(o2.getShopIdintificator());
         } else {
-            return cityUser1.compareTo(cityUser2);
+            return o1.getUser().getCity().compareTo(o2.getUser().getCity());
         }
     }
 }
