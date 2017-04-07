@@ -36,12 +36,7 @@ public class MainForList {
 
         System.out.println("Generated list of orders: " + orderList);
 
-        orderList.sort(new Comparator<Order>() {
-            @Override
-            public int compare(Order o1, Order o2) {
-                return o2.getPrice() - o1.getPrice();
-            }
-        });
+        orderList.sort(new SortByPriceComparator());
         System.out.println("Sorted list by price in decrase order: " + orderList);
 
         orderList.sort(new SortByPriceAndCityComparator());
