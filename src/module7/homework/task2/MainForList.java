@@ -6,7 +6,7 @@ import module7.homework.task1.Currency;
 import static module7.homework.task1.Currency.*;
 
 public class MainForList {
-    private static List<Order> orderList = new ArrayList<>(12);
+    private static List<Order> orderList = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -48,6 +48,7 @@ public class MainForList {
         System.out.println("List with removed duplicates: " + deleteDublicateFromList(orderList));
         System.out.println("List deleted items with price low than 1500: " + deleteOrdersWithLowestPrice(orderList));
         System.out.println("List separeted by currency: " + separateListByCurrency(orderList));
+        System.out.println("List separated into lists by cities: " + separateListIntoListsByCities(orderList));
     }
 
     private static List<Order> deleteDublicateFromList(List<Order> orders) {
@@ -68,12 +69,12 @@ public class MainForList {
         return resultList;
     }
 
-    private static Map<Currency, List<Order>> separateListByCurrency(List<Order> ordares) {
+    private static Map<Currency, List<Order>> separateListByCurrency(List<Order> orders) {
         Map<Currency, List<Order>> resultMap = new HashMap<>();
         List<Order> listUSD = new ArrayList<>();
         List<Order> listUAH = new ArrayList<>();
 
-        for(Order order : ordares) {
+        for(Order order : orders) {
             if (order.getCurrency().equals(Currency.UAH)) {
                 listUAH.add(order);
             } else {
@@ -84,4 +85,21 @@ public class MainForList {
         resultMap.put(USD, listUSD);
         return resultMap;
     }
-}
+    private static Map<String, List<Order>> separateListIntoListsByCities(List<Order> orders) {
+        Map<String, List<Order>> result = new HashMap<>();
+        for (Order order : orders) {
+            String city = order.getUser().getCity();
+            if (result.containsKey(city)) {
+                result.get(city).add(order);
+            } else {
+                List<Order> orderList = new ArrayList<>();
+                orderList.add(order);
+                result.put(city, orderList);
+            }
+        }
+        return result;
+    }
+
+    }
+
+
