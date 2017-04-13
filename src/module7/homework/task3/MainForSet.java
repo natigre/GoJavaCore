@@ -56,11 +56,11 @@ public class MainForSet {
 
     private static Set<Order> deleteOrdersWithUSD(Set<Order> orders) {
         Set<Order> result = new TreeSet<>(orders);
-        Iterator<Order> iter = result.iterator();
-        while (iter.hasNext()) {
-            Order order = iter.next();
+        Iterator<Order> iterator = result.iterator();
+        while (iterator.hasNext()) {
+            Order order = iterator.next();
             if (order.getCurrency().equals(Currency.USD)) {
-                iter.remove();
+                iterator.remove();
             }
         }
         return result;

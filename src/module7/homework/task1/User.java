@@ -16,13 +16,13 @@ public class User implements Comparable<User>{
     }
 
     @Override
-    public int compareTo(User o) {
-        if (getFirstName().compareTo(o.getFirstName()) != 0) {
-            return getFirstName().compareTo(o.getFirstName());
-        } else if (getLastName().compareTo(o.getLastName()) != 0) {
-            return getLastName().compareTo(o.getLastName());
-        } else if (getCity().compareTo(o.getCity()) != 0) {
-            return getCity().compareTo(o.getCity());
+    public int compareTo(User user) {
+        if (getFirstName().compareTo(user.getFirstName()) != 0) {
+            return getFirstName().compareTo(user.getFirstName());
+        } else if (getLastName().compareTo(user.getLastName()) != 0) {
+            return getLastName().compareTo(user.getLastName());
+        } else if (getCity().compareTo(user.getCity()) != 0) {
+            return getCity().compareTo(user.getCity());
         }
         return 0;
     }

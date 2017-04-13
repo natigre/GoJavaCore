@@ -36,8 +36,8 @@ public class Order implements Comparable<Order> {
     }
 
     @Override
-    public int compareTo(Order o) {
-        return o.getPrice() - this.price;
+    public int compareTo(Order order) {
+        return order.getPrice() - this.price;
     }
 
     @Override

@@ -59,9 +59,9 @@ public class MainForList {
 
     private static List<Order> deleteOrdersWithLowestPrice(List<Order> orders) {
         List<Order> resultList = new ArrayList<>();
-        Iterator<Order> iter = orders.iterator();
-        while (iter.hasNext()) {
-            Order order = iter.next();
+        Iterator<Order> iterator = orders.iterator();
+        while (iterator.hasNext()) {
+            Order order = iterator.next();
             if (order.getPrice() < 1500) {
                 resultList.add(order);
             }
