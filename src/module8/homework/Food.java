@@ -44,4 +44,14 @@ public class Food {
     public int getExpiration() {
         return expiration;
     }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", country=" + country +
+                ", expiration=" + expiration +
+                '}';
+    }
 }
