@@ -1,5 +1,5 @@
 package module8.homework;
 
 public enum Country {
-    UKRAINE, POLAND, GERMANY, ITALY, USA
+    UKRAINE, POLAND, CHILY, ITALY, USA
 }

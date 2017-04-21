@@ -7,11 +7,11 @@ public class Main {
         Food goods1 = new Food("Milk", POLAND, 12);
         Food goods2 = new Food("Potatoes", USA, 150);
         Food goods3 = new Food("Cookies", UKRAINE, 360);
-        Food goods4 = new Food("Banana", GERMANY, 48);
+        Food goods4 = new Food("Banana", CHILY, 48);
         Food goods5 = new Food("Pasta", ITALY, 720);
 
         IManageSystemImpl foodManageSystem = new IManageSystemImpl();
-        foodManageSystem.save(goods1);
+        foodManageSystem.save(goods1, 23);
         foodManageSystem.save(goods2, 6.6);
         foodManageSystem.save(goods3, 27.9);
         foodManageSystem.save(goods4, 29);
@@ -30,15 +30,15 @@ public class Main {
         System.out.println();
 
         System.out.println("Delete product by id:");
-        foodManageSystem.deleteById(11);
+        foodManageSystem.deleteById(0);
         System.out.println();
 
         System.out.println("Get products by specific id:");
-        System.out.println(foodManageSystem.get(11));
+        System.out.println(foodManageSystem.get(2));
         System.out.println();
 
         System.out.println("Get price specific product:");
-        Double price1 = foodManageSystem.getPrice(goods3);
+        Double price1 = foodManageSystem.getPrice(goods5);
         System.out.println(price1);
         System.out.println();
 

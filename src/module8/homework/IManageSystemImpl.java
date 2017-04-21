@@ -85,8 +85,8 @@ public class IManageSystemImpl implements IManageSystem<Food> {
         List<Food> sortByName = new ArrayList<>(database.keySet());
         Collections.sort(sortByName, new Comparator<Food>() {
             @Override
-            public int compare(Food o1, Food o2) {
-                return o1.getName().compareTo(o2.getName());
+            public int compare(Food food1, Food food2) {
+                return food1.getName().compareTo(food2.getName());
             }
         });
         for (Food food : sortByName) {
@@ -96,19 +96,21 @@ public class IManageSystemImpl implements IManageSystem<Food> {
 
     @Override
     public void printProductsSortedByPrice() {
-        Set<Map.Entry<Food, Double>> sortByPrices = new TreeSet<>(new Comparator<Map.Entry<Food, Double>>() {
+        List<Map.Entry<Food, Double>> sotrByPrice = new ArrayList<>(database.entrySet());
+        for (Map.Entry<Food, Double> entry : sotrByPrice) {
+            if (entry.getValue() == null) {
+                entry.setValue(0d);
+            }
+        }
+        sotrByPrice.sort(new Comparator<Map.Entry<Food, Double>>() {
             @Override
             public int compare(Map.Entry<Food, Double> o1, Map.Entry<Food, Double> o2) {
-                if (o1.getValue().compareTo(o2.getValue()) == 0) {
-                    return o1.getKey().getName().compareTo(o2.getKey().getName());
-                }
                 return o1.getValue().compareTo(o2.getValue());
             }
         });
-
-        sortByPrices.addAll(database.entrySet());
-        for (Map.Entry<Food, Double> sortByPrice : sortByPrices) {
-            System.out.println(sortByPrice.getKey() + " " + sortByPrice.getValue());
+        for (Map.Entry<Food, Double> databaseByPrice : sotrByPrice) {
+            System.out.println(databaseByPrice.getKey() + " " + databaseByPrice.getValue());
         }
     }
 }
+
