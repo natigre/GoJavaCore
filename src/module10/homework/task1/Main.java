@@ -5,10 +5,10 @@ public class Main {
         try {
             throw new Exception("Axception in main");
         } catch (Exception e) {
-            System.out.println("e.getMessage = " + e.getMessage());
+            System.err.println("e.getMessage = " + e.getMessage());
         }
         finally {
-            System.out.println("It's work in finally clause!");
+            System.err.println("It's work in finally clause!");
         }
     }
 }

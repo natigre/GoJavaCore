@@ -18,7 +18,7 @@ public class UsingException {
         try {
             ue.f();
         } catch (AnotherException e) {
-            System.out.println("Caught " + e);
+            System.err.println("Caught " + e);
         }
     }
 }

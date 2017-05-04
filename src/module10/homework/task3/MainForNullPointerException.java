@@ -6,7 +6,7 @@ public class MainForNullPointerException {
         try {
            s.toString();
         } catch (NullPointerException e) {
-            System.out.println("Exception was caught: " + e);
+            System.err.println("Exception was caught: " + e);
         }
     }
 }

@@ -8,9 +8,9 @@ public class ExceptionsCautchMain {
         try {
             thrower.f();
         } catch (NewException e) {
-            System.out.println("Caught " + e);
+            System.err.println("Caught " + e);
         } catch (Exception e) {
-            System.out.println("Caught " + e);
+            System.err.println("Caught " + e);
         }
     }
 }
